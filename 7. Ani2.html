@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html> 
+<head>
+    <title>7. 애니메이션2</title>
+    <link rel="icon" href="favicon.png">
+    <meta charset="utf-8"> 
+    <style>
+        a {
+           color: black;
+           text-decoration: none;
+        }
+        h1 {
+           font-size: 50px;
+           text-align: center;
+           border-width: 7px;
+           border-color: green;
+           border-style: ridge;
+           margin: 0px;
+           padding: 15px;
+        }
+        img {
+           margin: 50px 50px 50px 50px;
+           object-fit: contain;
+       }
+       body {
+         margin: 0px;
+       }
+       u {
+           color: rgb(51, 104, 51)
+       }
+       p{
+        font-family:'Malgun Gothic';
+        font-size: 17px;
+        line-height: 2.4;
+       }
+        #active {
+           color: blue;
+       }
+        .saw {
+           color: gray;
+       }
+        #grid {
+           display: grid;
+           grid-template-columns: 300px 1300px 300px;
+           grid-template-areas:
+               "index  main  log"
+       }
+       iframe {
+           position: fixed;
+           border-right: 2px solid green;
+           border-bottom: none;
+           border-left: none;
+           border-top: none;
+           width: 300px;
+           height: 100%;
+           margin: 0px;
+       }
+       @media (max-width :1300px) {
+           #grid {
+               display: block;
+               margin-top: 1000px;
+           }
+           iframe {
+               position: absolute;
+           }    
+       }
+        /*
+        @media only screen and (min-width :900px) and (max-width :1300px) {
+            #grid {
+                display: block;
+                margin-top: 1000px;
+            }
+            iframe {
+                position: absolute;
+            }    
+        }
+        @media only screen and (min-width :1px) and (max-width : 900px) {
+            #grid {
+                display: block;
+                margin-top: 1000px;
+            }
+            iframe {
+                position: absolute;
+            }
+            img{
+                max-width: 100%;
+                width:auto;
+            }    
+        }
+        */
+    </style>
+</head>
+<body oncontextmenu="return false" ondragstart="return false" onselectstart="return false">
+    <h1 style= "margin-top:15px;"><a href="CreoIllustrate.html" style="color: green" title="Illustrate 교육 메인페이지로 이동">Creo Illustrate 교육</a></h1>
+    <iframe src="CreoIllustrateIndex.html"></iframe>
+    <div id="grid"> <!--이 바로 아래 div 3개가 grid로 나눠논 index, main, log-->
+        <div></div> <!--index, 첫번째 grid 영역 시작, 끝-->
+        <div style="margin:80px 80px 80px 80px;"> <!--main, 두번째 grid 영역 시작-->   
+            <div>
+                <p>본 교육을 위해 아래 다운로드를 클릭해 교육용 파일을 다운로드해 주시기 바랍니다.</p>
+                <P style="margin-top:30px;"></P>
+                <a href="https://pobisgroup-my.sharepoint.com/:f:/g/personal/ch_lee_dimoa_co_kr/Ehy2fCWJF21JuZVfs98XfXIBXDRPbrwsR3majxdzM4_Ydg?e=bhNZ12" target="_blank" style="border: solid red 4px; font-size: 20px;"> 다운로드</a>
+            </div>
+            
+            <div style="margin-top:200px;">
+                <h2 style="border : solid green; display: inline; padding: 10px;">중간 실습</h2>
+                <p style="margin-top:80px;"></p>
+                <strong>
+                    <p>
+                        이번 시간에는 애니메이션 제작을 실습위주로 진행해보겠습니다.
+                        'XW_FL_assy.pvz' 파일을 가져오기 합니다.
+                        아래 실습 예시를 올려놓지만 똑같이 따라하지 않고 자신의 아이디어로 애니메이션을 연출해도 됩니다.
+                    </p>
+                    <img style="margin-top:100px;" src="7. Ani2/Ani11.png" width="900">
+                    <p>1. 방향을 정합니다. 방향은 마우스와 휠, shift를 이용해 조정합니다.</p>
+                    <img src="7. Ani2/Ani12.png" width="900">
+                    <p>2. '현재 보기 사용'으로 그림을 지정합니다.</p>
+                    <img src="7. Ani2/Ani13.png" width="900">
+                    <p>
+                        3. '홈 탭 > 탑색 그룹 > 방향'을 클릭합니다.
+                        새로 만들기를 클릭하고 이름을 '1'로 지정하고 확인을 누릅니다.
+                        '1'이라는 새로운 방향이 만들어진 것을 확인하고 닫기를 클릭합니다.
+                    </p>
+                    <img src="7. Ani2/Ani13.png" width="900">
+                    <p>4. 그림의 이름을 '분해'로 변경합니다.</p>
+                    <img src="7. Ani2/Ani14.png" width="900">
+                    <p>5. 시퀀스를 생성합니다. </p>
+                    <img src="7. Ani2/Ani15.png" width="900">
+                    <p>6. 단계 1의 이름을 'pulley'로 변경합니다.</p>
+                    <img src="7. Ani2/Ani16.png" width="900">
+                    <p>7. 시간을 2초 단위로 변경합니다. (드래그&드롭)</p>
+                    <img src="7. Ani2/Ani17.png" width="900">
+                    <p>
+                        8. 모델트리에서 전체(X-W_F-L_assy_asm)를 선택하고, 변환을 클릭합니다.
+                        위와 같이 모델의 중심이 아닌 글로벌 좌표계가 선택되는 것을 볼 수 있습니다.
+                    </p>
+                    <img src="7. Ani2/Ani18.png" width="900">
+                    <p>
+                        9. '변환 드롭다운'을 클릭하고 좌표계 선택을 클릭합니다.
+                        그래픽 창의 '하우징'을 선택하고 확인을 누릅니다.
+                    </p>
+                    <img src="7. Ani2/Ani19.png" width="900">
+                    <p>
+                        10. 이제 좌표계가 중심에 위치하는 것을 볼 수 있습니다.
+                        초록색 회전을 시계 방향으로 드래그하고 '90'을 입력하고 enter를 칩니다.
+                    </p>
+                    <img src="7. Ani2/Ani20.png" width="900">
+                    <p>
+                        11. 프레임 편집기에 키가 셍긴 것을 볼 수 있습니다.
+                        다시 시계 방향으로 '90' 회전시킵니다.
+                        이렇게 총 360도 회전할 때까지 반복합니다.
+                    </p>
+                    <img src="7. Ani2/Ani21.png" width="900">
+                    <p>
+                        12. 이미지와 같이 회전을 완료했다면 재생버튼을 클릭합니다.
+                        제품이 한바퀴 회전하며 전체적인 형상을 보여줍니다.
+                        (그래픽 창에 빈칸을 클릭해 선택을 해제하고 재생합니다.)
+                    </p>
+                    <img src="7. Ani2/Ani22.png" width="900">
+                    <p>
+                        13. 이제 풀리를 강조하고 화면을 줌인하겠습니다.
+                        이미지와 같이 화면을 이동합니다.
+                        '카메라 기록'이 비활성화 상태이기 때문에 키가 늘어나지 않습니다.
+                        (비활성화 유지)
+                    </p>
+                    <img src="7. Ani2/Ani9.gif" width="900">
+                    <p>
+                        14. 그래픽 창에서 '+Ctrl, 드래그&드롭'하여 위와 같이 선택합니다.
+                        드래그는 꼭 왼쪽에서 오른쪽으로 드래그 해야합니다.
+                    </p>
+                    <img src="7. Ani2/Ani23.png" width="900">
+                    <p>
+                        15. '기록 그룹 > 효과 드롭다운 > 플래시'를 클릭합니다.
+                    </p>
+                    <img src="7. Ani2/Ani24.png" width="900">
+                    <p>
+                        16. '기록 그룹 > 효과 드롭다운 > 플래시'를 클릭합니다.
+                        색을 초록색으로, 두번 효과를 주고 확인을 클릭합니다.
+                    </p>
+                    <img src="7. Ani2/Ani25.png" width="900">
+                    <p>
+                        17. 새로운 키가 생긴 것을 볼 수 있습니다.
+                        새로운 트렉은 플래시 효과에 관련된 키입니다.
+                    </p>
+                    <img src="7. Ani2/Ani10.gif" width="900">
+                    <p>
+                        18. 새 트랙 1의 키를 클릭하고 오른쪽 모서리를 드래그&드롭해서 1.5초까지 효과로 변경합니다.
+                    </p>
+                    <img src="7. Ani2/Ani27.png" width="900">
+                    <p>
+                        19. '홈 탭 > 방향 드롭다운' 클릭하고 '1'을 선택합니다.
+                    </p>
+                    <img src="7. Ani2/Ani28.png" width="900">
+                    <p>
+                        20. '기록 그룹 > 캡쳐 드롭다운' 클릭하고 '카메라'를 선택합니다.
+                    </p>
+                    <img src="7. Ani2/Ani11.gif" width="900">
+                    <p>
+                        21. 타임 라인에 마우스를 위치하고 휠을 돌리면 라인의 밀도가 달라집니다.
+                        11초로 편집 포인터를 옴깁니다.
+                        이미지처럼 풀리를 줌인 후 '캡처'를 클릭합니다.
+                    </p>
+                    <img src="7. Ani2/Ani29.png" width="900">
+                    <p>
+                        22. +Ctrl을 이용해서 다음과 같이 스크류를 모두 선택합니다.
+                    </p>
+                    <img src="7. Ani2/Ani29.png" width="900">
+                    <p>
+                        23. 마우스 우클릭을 하고 '선택 집합 만들기'를 클릭합니다.
+                    </p>
+                    <img src="7. Ani2/Ani30.png" width="900">
+                    <p>
+                        24. 선택 집합 이름을 다름과 같이 저장합니다.
+                    </p>
+                    <img src="7. Ani2/Ani31.png" width="900">
+                    <p>
+                        25. 이제 다음과 같이 상단 패널에서 '나사1' 선택 집합을 선택할 수 있습니다.
+                        '효과 드롭다운 > 언스크류'를 클릭합니다.
+                        나사가 회전하며 나오는 것을 볼 수 있습니다.
+                    </p>
+                    <img src="7. Ani2/Ani32.png" width="900">
+                    <p>
+                        26. 이제 다음과 같이 상단 패널에서 '나사1' 선택 집합을 선택할 수 있습니다.
+                        '효과 드롭다운 > 언스크류'를 클릭합니다.
+                        나사가 회전하며 나오는 것을 볼 수 있습니다.
+                    </p>
+                    <img src="7. Ani2/Ani33.png" width="900">
+                    <p>
+                        27. 언스크류 효과를 이미지와 같이 '반시계 방향', '거리' 설정하고 확인을 클릭합니다.
+                    </p>
+                    <p>
+                        28. 그래픽 창 빈곳에 클릭해서 선택 부품들을 해제하고 재생을 클릭합니다.
+                    </p>
+                    <img src="7. Ani2/Ani34.png" width="900">
+                    <p>
+                        29. 상단 패널의 '나사1'을 클릭해 쉽게 나사들을 선택합니다.
+                        sBOM에서 선택된 부품에 마우스 우클릭하고 '숨기기'를 클릭합니다.
+                    </p>
+                    <img src="7. Ani2/Ani35.png" width="900">
+                    <p>
+                        30. 키프레임 편집기 바를 이용해 가장 아래까지 이동합니다.
+                        카메라 관련 목록이 있습니다.
+                        '캡처'를 클릭해 이미지와 같이 포인트를 생성합니다.
+                    </p>
+                    <img src="7. Ani2/Ani12.gif" width="900">
+                    <p>
+                        31. 화면을 줌인했던 것처럼 캡처를 이용해 화면을 옴겨봅시다.
+                    </p>
+                    <img src="7. Ani2/Ani36.png" width="900">
+                    <p>
+                        32. 이미지와 같이 나사들을 선택하고 '나사2' 선택 집합을 만듭니다.
+                    </p>
+                    <img src="7. Ani2/Ani36.png" width="900">
+                    <p>
+                        33. '효과 드롭다운 > 언스크류'를 클릭합니다.
+                        나사가 반대 방향으로 움직이는 것을 볼 수 있습니다.
+                    </p>
+                    <img src="7. Ani2/Ani37.png" width="900">
+                    <p>
+                        34. 이미지와 같이 설정하고 확인을 클릭합니다.
+                    </p>
+                    <img src="7. Ani2/Ani39.png" width="900">
+                    <p>
+                        35. sBOM에서 선택된 부품에 마우스 우클릭하고 '숨기기'를 클릭합니다.
+                    </p>
+                    <img src="7. Ani2/Ani40.png" width="900">
+                    <p>
+                        36. 너트들도 '언스크류' 선택하고 위와 같이 설정 후 확인을 클릭합니다.
+                    </p>
+                    <img src="7. Ani2/Ani41.png" width="900">
+                    <p>
+                        37. sBOM에서 마우스 우클릭으로 '숨기기'를 클릭합니다.
+                    </p>
+                    <img src="7. Ani2/Ani42.png" width="900">
+                    <p>
+                        38. 뒤쪽 볼트들에도 '언스크류'를 적용하고 '숨기기'를 적용합니다.
+                    </p>
+                    <img src="7. Ani2/Ani43.png" width="900">
+                    <p>
+                        39. 이미지처럼 부품을 선택합니다.
+                    </p>
+                    <img src="7. Ani2/Ani44.png" width="900">
+                    <p>
+                        40. 이미지처럼 변환으로 '-150mm'를 입력해 이동합니다.
+                        숨기기를 적용합니다.
+                    </p>
+                    <img src="7. Ani2/Ani45.png" width="900">
+                    <p>
+                        41. 뒤쪽의 부품도 동시에 이동 및 숨기기를 적용하고 싶습니다.
+                        편집 포인터를 30초로 이동합니다.
+                    </p>
+                    <img src="7. Ani2/Ani46.png" width="900">
+                    <p>
+                        42. 이미지처럼 변환으로 '150mm'를 입력해 이동합니다.
+                        숨기기를 적용합니다.
+                    </p>
+                    <img src="7. Ani2/Ani13.gif" width="900">
+                    <p>
+                        재생해보면 양면이 동시에 움직이는 것을 볼 수 있습니다.
+                    </p>
+                    <img src="7. Ani2/Ani47.png" width="900">
+                    <p>
+                        43. 이미지처럼 변환을 적용하고 숨기기를 적용합니다.
+                        반대편도 동시간에 진행될 수 있도록 합니다.
+                    </p>
+                    <img src="7. Ani2/Ani14.gif" width="900">
+                    <img src="7. Ani2/Ani48.png" width="900">
+                    <p>
+                        44. 이미지처럼 '200'mm 변환합니다.
+                    </p>
+                    <img src="7. Ani2/Ani49.png" width="900">
+                    <p>
+                        45. 이미지처럼 '150'mm 변환합니다.
+                    </p>
+                    <img src="7. Ani2/Ani50.png" width="900">
+                    <p>
+                        46. 두 부품에 숨기기를 적용합니다.
+                    </p>
+                    <p style="margin-top: 50px;">
+                        재생을 통해 여태까지의 작업을 확인합니다.
+                    </p>
+                </strong>
+            </div>
+
+            <div style="margin-top: 100px;">
+                <p style="margin-bottom: 120px;">수고하셨습니다.</p>
+                <h3><a href="CreoIllustrate.html" class="saw" id="active">Illustrate 교육 메인페이지로 돌아가기</a></h3>
+            </div>
+        </div> <!--main, 두번째 grid 영역 끝-->
+        <div></div> <!--log, 세번째 grid 영역 시작, 끝-->
+    </div>
+</body>
+</html>

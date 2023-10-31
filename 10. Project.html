@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html> 
+<head>
+    <title>10. 프로젝트</title>
+    <link rel="icon" href="favicon.png">
+    <meta charset="utf-8"> 
+    <style>
+        a {
+           color: black;
+           text-decoration: none;
+        }
+        h1 {
+           font-size: 50px;
+           text-align: center;
+           border-width: 7px;
+           border-color: green;
+           border-style: ridge;
+           margin: 0px;
+           padding: 15px;
+        }
+        img {
+           margin: 50px 50px 50px 50px;
+           object-fit: contain;
+       }
+       body {
+         margin: 0px;
+       }
+       u {
+           color: rgb(51, 104, 51)
+       }
+       p{
+        font-family:'Malgun Gothic';
+        font-size: 17px;
+        line-height: 2.4;
+       }
+        #active {
+           color: blue;
+       }
+        .saw {
+           color: gray;
+       }
+        #grid {
+           display: grid;
+           grid-template-columns: 300px 1300px 300px;
+           grid-template-areas:
+               "index  main  log"
+       }
+       iframe {
+           position: fixed;
+           border-right: 2px solid green;
+           border-bottom: none;
+           border-left: none;
+           border-top: none;
+           width: 300px;
+           height: 100%;
+           margin: 0px;
+       }
+       @media (max-width :1300px) {
+           #grid {
+               display: block;
+               margin-top: 1000px;
+           }
+           iframe {
+               position: absolute;
+           }    
+       }
+        /*
+        @media only screen and (min-width :900px) and (max-width :1300px) {
+            #grid {
+                display: block;
+                margin-top: 1000px;
+            }
+            iframe {
+                position: absolute;
+            }    
+        }
+        @media only screen and (min-width :1px) and (max-width : 900px) {
+            #grid {
+                display: block;
+                margin-top: 1000px;
+            }
+            iframe {
+                position: absolute;
+            }
+            img{
+                max-width: 100%;
+                width:auto;
+            }    
+        }
+        */
+    </style>
+</head>
+<body oncontextmenu="return false" ondragstart="return false" onselectstart="return false">
+    <h1 style= "margin-top:15px;"><a href="CreoIllustrate.html" style="color: green" title="Illustrate 교육 메인페이지로 이동">Creo Illustrate 교육</a></h1>
+    <iframe src="CreoIllustrateIndex.html"></iframe>
+    <div id="grid"> <!--이 바로 아래 div 3개가 grid로 나눠논 index, main, log-->
+        <div></div> <!--index, 첫번째 grid 영역 시작, 끝-->
+        <div style="margin:80px 80px 80px 80px;"> <!--main, 두번째 grid 영역 시작-->   
+            <div>
+                <p>본 교육을 위해 아래 다운로드를 클릭해 교육용 파일을 다운로드해 주시기 바랍니다.</p>
+                <P style="margin-top:30px;"></P>
+                <a href="https://pobisgroup-my.sharepoint.com/:f:/g/personal/ch_lee_dimoa_co_kr/Ehy2fCWJF21JuZVfs98XfXIBXDRPbrwsR3majxdzM4_Ydg?e=bhNZ12" target="_blank" style="border: solid red 4px; font-size: 20px;"> 다운로드</a>
+            </div>
+            
+            <div style="margin-top:300px;">
+                <h2><li>프로젝트</li></h2>
+                <p style="margin-top:80px;"></p>
+                <strong>
+                    <p>
+                        추후 이어질 Vuforia Instruct, Studio에서 사용될 애니메이션을 제작해봅시다.
+                        Instruct에서는 현장 작업자의 작업을 이해시키는 동영상으로, Studio에서는 눈앞에서 3D로 구현되는 AR로 사용됩니다.
+                    </p>
+                    <p>
+                        프로젝트 폴더 안의 'up_mini_total.pvz' 파일을 가져오기 합니다.
+                        이번 시간에는 시나리오와 힌트 동영상을 제공합니다.
+                        시나리오와 동영상을 확인하고 작업자가 이해하기 쉬운 애니메이션을 제작해봅시다.
+                    </p>
+                    <img src="10. Project/Project2.png" width="700">
+                    <img style="margin: 100px 50px 20px 50px;" src="10. Project/Project1.png" width="750">
+                    <p>
+                        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                        - 시나리오 -
+                    </p>
+                    <p style="margin-top: 200px;">1. 장비 콘센트 연결, 장비 상태, 장비 부품을 이미지를 참조해 살펴봅니다.</p>
+                    <details style="margin-top: 100px;">
+                        <summary>Hint!</summary>
+                        <img src="10. Project/장비.png" width="500">
+                        <p>장비는 다음과 같이 구성되어 있습니다. 장비를 360도 회전시키는 연출을 만들어 봅시다.</p>
+                    </details>
+                    <style>
+                        details { margin:5px 0 100px; }
+                        details > summary { background:#444; color:#fff; padding:10px; outline:0; border-radius:5px; cursor:pointer; transition:background 0.5s; text-align:left; box-shadow: 1px 1px 2px gray;}
+                        details > summary::-webkit-details-marker { background:#444; color:#fff; background-size:contain; transform:rotate3d(0, 0, 1, 90deg); transition:transform 0.25s;}
+                        details[open] > summary::-webkit-details-marker { transform:rotate3d(0, 0, 1, 180deg);}
+                        details[open] > summary { background:rgb(0, 119, 255);}
+                        details[open] > summary ~ * { animation:reveal 0.5s;}
+                        .tpt { background:#444; color:#fff; margin:5px 0 10px; padding:5px 10px; line-height:25px; border-radius:5px; box-shadow: 1px 1px 2px gray;}
+                        
+                        @keyframes reveal {
+                            from { opacity:0; transform:translate3d(0, -30px, 0); }
+                            to { opacity:1; transform:translate3d(0, 0, 0); }
+                        }
+                    </style>
+
+                    <p style="margin-top: 200px;">2. 장비 후면의 전원 스위치를 ON으로 합니다.</p>
+                    <details style="margin-top: 100px;">
+                        <summary>Hint!</summary>
+                        <p style="margin-top:70px;"><video src="10. Project/2. Switch.mp4" width="900" controls></video></p>
+                    </details>
+                    <style>
+                        details { margin:5px 0 100px; }
+                        details > summary { background:#444; color:#fff; padding:10px; outline:0; border-radius:5px; cursor:pointer; transition:background 0.5s; text-align:left; box-shadow: 1px 1px 2px gray;}
+                        details > summary::-webkit-details-marker { background:#444; color:#fff; background-size:contain; transform:rotate3d(0, 0, 1, 90deg); transition:transform 0.25s;}
+                        details[open] > summary::-webkit-details-marker { transform:rotate3d(0, 0, 1, 180deg);}
+                        details[open] > summary { background:rgb(0, 119, 255);}
+                        details[open] > summary ~ * { animation:reveal 0.5s;}
+                        .tpt { background:#444; color:#fff; margin:5px 0 10px; padding:5px 10px; line-height:25px; border-radius:5px; box-shadow: 1px 1px 2px gray;}
+                        
+                        @keyframes reveal {
+                            from { opacity:0; transform:translate3d(0, -30px, 0); }
+                            to { opacity:1; transform:translate3d(0, 0, 0); }
+                        }
+                    </style>
+                    
+                    <p style="margin-top: 200px;">
+                        3. 전면 스크린에서 Initialize를 클릭합니다.
+                    </p>
+                    <details style="margin-top: 100px;">
+                        <summary>Hint!</summary>
+                        <p style="margin-top:70px;"><video src="10. Project/3. Initialize.mp4" width="900" controls></video></p>
+                        <img src="10. Project/초기화 3가지.png" width="500">
+                    </details>
+                    <style>
+                        details { margin:5px 0 100px; }
+                        details > summary { background:#444; color:#fff; padding:10px; outline:0; border-radius:5px; cursor:pointer; transition:background 0.5s; text-align:left; box-shadow: 1px 1px 2px gray;}
+                        details > summary::-webkit-details-marker { background:#444; color:#fff; background-size:contain; transform:rotate3d(0, 0, 1, 90deg); transition:transform 0.25s;}
+                        details[open] > summary::-webkit-details-marker { transform:rotate3d(0, 0, 1, 180deg);}
+                        details[open] > summary { background:rgb(0, 119, 255);}
+                        details[open] > summary ~ * { animation:reveal 0.5s;}
+                        .tpt { background:#444; color:#fff; margin:5px 0 10px; padding:5px 10px; line-height:25px; border-radius:5px; box-shadow: 1px 1px 2px gray;}
+                        
+                        @keyframes reveal {
+                            from { opacity:0; transform:translate3d(0, -30px, 0); }
+                            to { opacity:1; transform:translate3d(0, 0, 0); }
+                        }
+                    </style>
+
+                    <p style="margin-top: 200px;">
+                        4. 상단 커버를 오픈합니다. 
+                        상단 커버를 오픈하기 위해서는 앞뒤 도어를 오픈해야 합니다.
+                    </p>
+                    <details style="margin-top: 100px;">
+                        <summary>Hint!</summary>
+                        <p style="margin-top:70px;"><video src="10. Project/4. Cover.mp4" width="900" controls></video></p>
+                    </details>
+                    <style>
+                        details { margin:5px 0 100px; }
+                        details > summary { background:#444; color:#fff; padding:10px; outline:0; border-radius:5px; cursor:pointer; transition:background 0.5s; text-align:left; box-shadow: 1px 1px 2px gray;}
+                        details > summary::-webkit-details-marker { background:#444; color:#fff; background-size:contain; transform:rotate3d(0, 0, 1, 90deg); transition:transform 0.25s;}
+                        details[open] > summary::-webkit-details-marker { transform:rotate3d(0, 0, 1, 180deg);}
+                        details[open] > summary { background:rgb(0, 119, 255);}
+                        details[open] > summary ~ * { animation:reveal 0.5s;}
+                        .tpt { background:#444; color:#fff; margin:5px 0 10px; padding:5px 10px; line-height:25px; border-radius:5px; box-shadow: 1px 1px 2px gray;}
+                        
+                        @keyframes reveal {
+                            from { opacity:0; transform:translate3d(0, -30px, 0); }
+                            to { opacity:1; transform:translate3d(0, 0, 0); }
+                        }
+                    </style>
+
+                    <p style="margin-top: 200px;">5. 후면부 도어를 닫아줍니다.</p>
+                    <details style="margin-top: 100px;">
+                        <summary>Hint!</summary>
+                        <p style="margin-top:70px;"><video src="10. Project/5. BackDoor.mp4" width="900" controls></video></p>
+                    </details>
+                    <style>
+                        details { margin:5px 0 100px; }
+                        details > summary { background:#444; color:#fff; padding:10px; outline:0; border-radius:5px; cursor:pointer; transition:background 0.5s; text-align:left; box-shadow: 1px 1px 2px gray;}
+                        details > summary::-webkit-details-marker { background:#444; color:#fff; background-size:contain; transform:rotate3d(0, 0, 1, 90deg); transition:transform 0.25s;}
+                        details[open] > summary::-webkit-details-marker { transform:rotate3d(0, 0, 1, 180deg);}
+                        details[open] > summary { background:rgb(0, 119, 255);}
+                        details[open] > summary ~ * { animation:reveal 0.5s;}
+                        .tpt { background:#444; color:#fff; margin:5px 0 10px; padding:5px 10px; line-height:25px; border-radius:5px; box-shadow: 1px 1px 2px gray;}
+                        
+                        @keyframes reveal {
+                            from { opacity:0; transform:translate3d(0, -30px, 0); }
+                            to { opacity:1; transform:translate3d(0, 0, 0); }
+                        }
+                    </style>
+
+                    <p style="margin-top: 200px;">6. 재료를 장착합니다.</p>
+                    <details style="margin-top: 100px;">
+                        <summary>Hint!</summary>
+                        <p style="margin-top:70px;"><video src="10. Project/6. Material.mp4" width="900" controls></video></p>
+                        <img src="10. Project/재료 로드.png" width="500">
+                    </details>
+                    <style>
+                        details { margin:5px 0 100px; }
+                        details > summary { background:#444; color:#fff; padding:10px; outline:0; border-radius:5px; cursor:pointer; transition:background 0.5s; text-align:left; box-shadow: 1px 1px 2px gray;}
+                        details > summary::-webkit-details-marker { background:#444; color:#fff; background-size:contain; transform:rotate3d(0, 0, 1, 90deg); transition:transform 0.25s;}
+                        details[open] > summary::-webkit-details-marker { transform:rotate3d(0, 0, 1, 180deg);}
+                        details[open] > summary { background:rgb(0, 119, 255);}
+                        details[open] > summary ~ * { animation:reveal 0.5s;}
+                        .tpt { background:#444; color:#fff; margin:5px 0 10px; padding:5px 10px; line-height:25px; border-radius:5px; box-shadow: 1px 1px 2px gray;}
+                        
+                        @keyframes reveal {
+                            from { opacity:0; transform:translate3d(0, -30px, 0); }
+                            to { opacity:1; transform:translate3d(0, 0, 0); }
+                        }
+                    </style>
+
+                    <p style="margin-top: 200px;">7. 상면 커버를 닫아줍니다.</p>
+                    <details style="margin-top: 100px;">
+                        <summary>Hint!</summary>
+                        <p style="margin-top:70px;"><video src="10. Project/7. CoverRe.mp4" width="900" controls></video></p>
+                    </details>
+                    <style>
+                        details { margin:5px 0 100px; }
+                        details > summary { background:#444; color:#fff; padding:10px; outline:0; border-radius:5px; cursor:pointer; transition:background 0.5s; text-align:left; box-shadow: 1px 1px 2px gray;}
+                        details > summary::-webkit-details-marker { background:#444; color:#fff; background-size:contain; transform:rotate3d(0, 0, 1, 90deg); transition:transform 0.25s;}
+                        details[open] > summary::-webkit-details-marker { transform:rotate3d(0, 0, 1, 180deg);}
+                        details[open] > summary { background:rgb(0, 119, 255);}
+                        details[open] > summary ~ * { animation:reveal 0.5s;}
+                        .tpt { background:#444; color:#fff; margin:5px 0 10px; padding:5px 10px; line-height:25px; border-radius:5px; box-shadow: 1px 1px 2px gray;}
+                        
+                        @keyframes reveal {
+                            from { opacity:0; transform:translate3d(0, -30px, 0); }
+                            to { opacity:1; transform:translate3d(0, 0, 0); }
+                        }
+                    </style>
+
+                    <p style="margin-top: 200px;">8. 제품에 적합한 보드를 장착합니다.</p>
+                    <details style="margin-top: 100px;">
+                        <summary>Hint!</summary>
+                        <p style="margin-top:70px;"><video src="10. Project/8. Board.mp4" width="900" controls></video></p>
+                        <img src="10. Project/보드 종류.png" width="300">
+                    </details>
+                    <style>
+                        details { margin:5px 0 100px; }
+                        details > summary { background:#444; color:#fff; padding:10px; outline:0; border-radius:5px; cursor:pointer; transition:background 0.5s; text-align:left; box-shadow: 1px 1px 2px gray;}
+                        details > summary::-webkit-details-marker { background:#444; color:#fff; background-size:contain; transform:rotate3d(0, 0, 1, 90deg); transition:transform 0.25s;}
+                        details[open] > summary::-webkit-details-marker { transform:rotate3d(0, 0, 1, 180deg);}
+                        details[open] > summary { background:rgb(0, 119, 255);}
+                        details[open] > summary ~ * { animation:reveal 0.5s;}
+                        .tpt { background:#444; color:#fff; margin:5px 0 10px; padding:5px 10px; line-height:25px; border-radius:5px; box-shadow: 1px 1px 2px gray;}
+                        
+                        @keyframes reveal {
+                            from { opacity:0; transform:translate3d(0, -30px, 0); }
+                            to { opacity:1; transform:translate3d(0, 0, 0); }
+                        }
+                    </style>
+
+                    <p style="margin-top: 200px;">
+                        9. 전면 도어를 닫습니다.
+                        전면 도어가 열린 상태에서는 작동이 안됩니다.
+                    </p>
+                    <details style="margin-top: 100px;">
+                        <summary>Hint!</summary>
+                        <p style="margin-top:70px;"><video src="10. Project/9. FrontDoor.mp4" width="900" controls></video></p>
+                    </details>
+                    <style>
+                        details { margin:5px 0 100px; }
+                        details > summary { background:#444; color:#fff; padding:10px; outline:0; border-radius:5px; cursor:pointer; transition:background 0.5s; text-align:left; box-shadow: 1px 1px 2px gray;}
+                        details > summary::-webkit-details-marker { background:#444; color:#fff; background-size:contain; transform:rotate3d(0, 0, 1, 90deg); transition:transform 0.25s;}
+                        details[open] > summary::-webkit-details-marker { transform:rotate3d(0, 0, 1, 180deg);}
+                        details[open] > summary { background:rgb(0, 119, 255);}
+                        details[open] > summary ~ * { animation:reveal 0.5s;}
+                        .tpt { background:#444; color:#fff; margin:5px 0 10px; padding:5px 10px; line-height:25px; border-radius:5px; box-shadow: 1px 1px 2px gray;}
+                        
+                        @keyframes reveal {
+                            from { opacity:0; transform:translate3d(0, -30px, 0); }
+                            to { opacity:1; transform:translate3d(0, 0, 0); }
+                        }
+                    </style>
+
+                    <p style="margin-top: 200px;">
+                        10. 전면 도어를 닫습니다.
+                        전면 도어가 열린 상태에서는 작동이 안됩니다.
+                    </p>
+                    <details style="margin-top: 100px;">
+                        <summary>Hint!</summary>
+                        <p style="margin-top:70px;"><video src="10. Project/10. Setting.mp4" width="900" controls></video></p>
+                    </details>
+                    <style>
+                        details { margin:5px 0 100px; }
+                        details > summary { background:#444; color:#fff; padding:10px; outline:0; border-radius:5px; cursor:pointer; transition:background 0.5s; text-align:left; box-shadow: 1px 1px 2px gray;}
+                        details > summary::-webkit-details-marker { background:#444; color:#fff; background-size:contain; transform:rotate3d(0, 0, 1, 90deg); transition:transform 0.25s;}
+                        details[open] > summary::-webkit-details-marker { transform:rotate3d(0, 0, 1, 180deg);}
+                        details[open] > summary { background:rgb(0, 119, 255);}
+                        details[open] > summary ~ * { animation:reveal 0.5s;}
+                        .tpt { background:#444; color:#fff; margin:5px 0 10px; padding:5px 10px; line-height:25px; border-radius:5px; box-shadow: 1px 1px 2px gray;}
+                        
+                        @keyframes reveal {
+                            from { opacity:0; transform:translate3d(0, -30px, 0); }
+                            to { opacity:1; transform:translate3d(0, 0, 0); }
+                        }
+                    </style>
+
+                    <p style="margin-top: 200px;">
+                        11. 인쇄 재료를 PLA로 선택합니다.
+                        필라멘트 재료의 남은 질량을 입력합니다.
+                    </p>
+                </strong>
+            </div>
+
+            <div style="margin-top: 100px;">
+                <p style="margin-bottom: 120px;">수고하셨습니다.</p>
+                <h3><a href="CreoIllustrate.html" class="saw" id="active">Illustrate 교육 메인페이지로 돌아가기</a></h3>
+            </div>
+        </div> <!--main, 두번째 grid 영역 끝-->
+        <div></div> <!--log, 세번째 grid 영역 시작, 끝-->
+    </div>
+</body>
+</html>

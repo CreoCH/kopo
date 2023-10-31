@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html> 
+<head>
+    <title>3. 그림1</title>
+    <link rel="icon" href="favicon.png">
+    <meta charset="utf-8"> 
+    <style>
+        a {
+           color: black;
+           text-decoration: none;
+        }
+        h1 {
+           font-size: 50px;
+           text-align: center;
+           border-width: 7px;
+           border-color: green;
+           border-style: ridge;
+           margin: 0px;
+           padding: 15px;
+        }
+        img {
+           margin: 50px 50px 50px 50px;
+           object-fit: contain;
+       }
+       body {
+         margin: 0px;
+       }
+       u {
+           color: rgb(51, 104, 51)
+       }
+       p{
+        font-family:'Malgun Gothic';
+        font-size: 17px;
+        line-height: 2.4;
+       }
+        #active {
+           color: blue;
+       }
+        .saw {
+           color: gray;
+       }
+        #grid {
+           display: grid;
+           grid-template-columns: 300px 1300px 300px;
+           grid-template-areas:
+               "index  main  log"
+       }
+       iframe {
+           position: fixed;
+           border-right: 2px solid green;
+           border-bottom: none;
+           border-left: none;
+           border-top: none;
+           width: 300px;
+           height: 100%;
+           margin: 0px;
+       }
+       @media (max-width :1300px) {
+           #grid {
+               display: block;
+               margin-top: 1000px;
+           }
+           iframe {
+               position: absolute;
+           }    
+       }
+        /*
+        @media only screen and (min-width :900px) and (max-width :1300px) {
+            #grid {
+                display: block;
+                margin-top: 1000px;
+            }
+            iframe {
+                position: absolute;
+            }    
+        }
+        @media only screen and (min-width :1px) and (max-width : 900px) {
+            #grid {
+                display: block;
+                margin-top: 1000px;
+            }
+            iframe {
+                position: absolute;
+            }
+            img{
+                max-width: 100%;
+                width:auto;
+            }    
+        }
+        */
+    </style>
+</head>
+<body oncontextmenu="return false" ondragstart="return false" onselectstart="return false">
+    <h1 style= "margin-top:15px;"><a href="CreoIllustrate.html" style="color: green" title="Illustrate 교육 메인페이지로 이동">Creo Illustrate 교육</a></h1>
+    <iframe src="CreoIllustrateIndex.html"></iframe>
+    <div id="grid"> <!--이 바로 아래 div 3개가 grid로 나눠논 index, main, log-->
+        <div></div> <!--index, 첫번째 grid 영역 시작, 끝-->
+        <div style="margin:80px 80px 80px 80px;"> <!--main, 두번째 grid 영역 시작-->
+            <div>
+                <p>본 교육을 위해 아래 다운로드를 클릭해 교육용 파일을 다운로드해 주시기 바랍니다.</p>
+                <P style="margin-top:30px;"></P>
+                <a href="https://pobisgroup-my.sharepoint.com/:f:/g/personal/ch_lee_dimoa_co_kr/Ehy2fCWJF21JuZVfs98XfXIBXDRPbrwsR3majxdzM4_Ydg?e=bhNZ12" target="_blank" style="border: solid red 4px; font-size: 20px;"> 다운로드</a>
+            </div>
+            <div>
+                <p>본 교육을 위해 아래 다운로드를 클릭해 교육용 파일을 다운로드해 주시기 바랍니다.</p>
+                <P style="margin-top:30px;"></P>
+                <a href="https://" target="_blank" style="border: solid red 4px; font-size: 20px;"> 다운로드</a>
+            </div>
+            
+            <div style="margin-top:200px;">
+                <h2><li>방향</li></h2>
+                <p style="margin-top:100px;"></p>
+                <img src="3. Illust1/Illust1.png" width="900">
+                <p>
+                    이제부터는 위에 '다운로드'에서 다운 받은 파일을 활용해 교육을 따라하며 진행해 보겠습니다.
+                </p>
+                <p>
+                    다운받은 폴더에서 'EBAmk2_00.step' 파일을 가져오기 합니다.
+                    CAD를 수정하지 않을 것이기 때문에 가져오기에서 '포함/연결' 중 아무거나 선택하셔도 됩니다.
+                </p>
+                <img src="3. Illust1/Illust2.png" width="900">
+                <p>
+                    크레인 방향이 뒤집혀져 있는 것을 볼 수 있습니다.
+                </p>
+                <img src="3. Illust1/Illust3.png" width="600">
+                <p>
+                    '휠' 버튼을 누르고 마우스를 움직입니다.
+                    화면이 회전하는 것을 볼 수 있습니다.
+                    '+shift'와 '휠' 버튼을 누르고 마우스를 움직이면 화면이 상하좌우로 움직이는 것을 볼 수 있습니다.
+                    화면 움직임을 연습해 봅시다.
+                </p>
+                <img src="3. Illust1/Illust4.png" width="900">
+                <p>
+                    이때 회전 중심은 마우스를 클릭한 지점입니다.
+                    때문에 클릭 위치에 따라 회전이 의도대로 되지 않을 수 있습니다.
+                    '홈 탭 > 탐색 그룹 > 회전 중심'을 클릭해 활성화하면 CAD의 중심을 기준으로 회전하게 되어 회전이 쉬워집니다.
+                    (이때 CAD의 중심은 무게 중심이 아닌 공간/부피의 중심입니다.)
+                    화면 움직임을 연습해 봅시다.
+                </p>
+                <img src="3. Illust1/Illust5.png" width="900">
+                <p>
+                    Illustrate는 <u>좌표계</u>를 기준으로 기본적인 방향을 제공합니다.
+                    '홈 탭 > 탐색 그룹 > 방향'을 클릭하면 기본 방향을 선택할 수 있습니다.
+                    방향을 선택해 봅시다.
+                </p>
+                <img src="3. Illust1/Illust6.png" width="900">
+                <img src="3. Illust1/Illust7.png" width="900">
+                <p>
+                    '사용자 정의 > 새로 만들기'를 통해서 원하는 방향을 연출하고 저장합니다.
+                    방향을 저장해두면 편하게 다시 그 방향을 불러올 수 있습니다.
+                    위 이미지와 최대한 유사한 방향을 만들고 저장해 봅시다.
+                </p>
+            </div>
+
+            <div style="margin-top:300px;">
+                <h2><li>랜더링</li></h2>
+                <p style="margin-top:100px;"></p>
+                <img src="3. Illust1/Illust8.png" width="900">
+                <p>
+                    '그림 탭 > 표시 그룹 > 랜더링 모드'를 클릭하면 원하는 랜더링을 선택할 수 있습니다.
+                </p>
+                <img src="3. Illust1/Illust9.png" width="700">
+                <p>
+                    메뉴얼 목적에 맞는(정보 제공, 제품 홍보) 랜더링을 선택해 적용해 봅시다.
+                </p>
+            </div>
+
+            <div style="margin-top:300px;">
+                <h2><li>직교 / 원근</li></h2>
+                <p style="margin-top:100px;"></p>
+                <img src="3. Illust1/Illust10.png" width="900">
+                <p>
+                    '그림 탭 > 표시 그룹 > 직교/원근'으로 직교, 원근 표현을 적용할 수 있습니다.
+                </p>
+                <img src="3. Illust1/Illust11.png" width="700">
+                <p>
+                    특별한 연출이 필요할 때가 아니면 작업지도서 작성에는 직교법이 더 직관적으로 이해됩니다.
+                </p>
+            </div>
+
+            <div style="margin-top:300px;">
+                <h2><li>배경</li></h2>
+                <p style="margin-top:100px;"></p>
+                <img src="3. Illust1/Illust12.png" width="900">
+                <p>
+                    '그림 탭 > 표시 그룹 > 배경/그라데이션'으로 바탕화면을 꾸며줄 수 있습니다.
+                </p>
+                <img style="margin: 50px 10px 50px 0px;" src="3. Illust1/Illust13.png" width="425"><img style="margin: 50px 0px 50px 0px;" src="3. Illust1/Illust14.png" width="425">
+            </div>
+
+            <div style="margin-top:300px;">
+                <h2><li>조명</li></h2>
+                <p style="margin-top:100px;"></p>
+                <img src="3. Illust1/Illust15.png" width="900">
+                <p>
+                    '그림 탭 > 조명 그룹 > 조명 장면'으로 광량을 조절할 수 있습니다.
+                    조명 장면을 누르면 조명 숫자를 정할 수 있습니다.
+                </p>
+                <img src="3. Illust1/Illust16.png" width="900">
+                <p>
+                    조명 숫자를 정한 후에는 밝기를 디테일하게 편집할 수 있습니다.
+                </p>
+            </div>
+
+            <div style="margin-top:300px;">
+                <h2><li>부품 색</li></h2>
+                <p style="margin-top:100px;"></p>
+                <img src="3. Illust1/Illust17.png" width="900">
+                <p>
+                    '홈 탭 > 스타일 그룹 > 색'으로 파트의 색을 변경할 수 있습니다.
+                </p>
+                <img src="3. Illust1/Illust18.png" width="900">
+                <p>
+                    실물과 최대한 유사한 색을 연출하거나, 파트간 색상이 비슷한데 강조하고 싶은 부품이 있다면 색상을 변경할 수 있습니다.
+                </p>
+                <img src="3. Illust1/Illust19.png" width="800">
+            </div>
+
+            <div style="margin-top:300px;">
+                <h2><li>그림만들기</li></h2>
+                <p style="margin-top:100px;"></p>
+                <img src="3. Illust1/Illust20.png" width="900">
+                <p>
+                    이제 그림을 만들어 보겠습니다.
+                    그림은 일러스트 자체로 의미가 있지만, 추후 진행한 애니메이션의 시작점이 됩니다.
+                    이부분은 추후에 애니메이션을 작업해 보지 않으면 이해하기 어려우니 간단히 넘어가고 애니메이션 부분에서 자세히 설명드리겠습니다.
+                    '홈 탭 > 탐색 그룹 > 그림 보기'를 클릭하고 '현재 보기 사용'을 클릭하면 현재 그래픽 창에서 표현되고 있는 모습이 현재 그림이 됩니다.
+                </p>
+                <img src="3. Illust1/Illust21.png" width="600">
+                <p>
+                    먼저 '기본 패널'에서 '그림 탭'을 눌러봅시다.
+                    그림 탭아래 폴더 아이콘과 그림 아이콘이 있습니다.
+                    '그림 아이콘'을 클릭합니다. (이미지의 적색 칸 참조)
+                    이미지처럼 아무 그림이 없거나 뭔가 그림이 있을 겁니다.
+                    이 차이는 처음 파일을 가져오기 할 때, '현재 보기 사용/나중에 하기' 선택 차이입니다.
+                </p>
+                <img src="3. Illust1/Illust22.png" width="1000">
+                <p>
+                    이제 '홈 탭 > 탐색 그룹 > 그림 보기'에서 '현재 보기 사용'를 클릭합니다.
+                    그림이 없던 분들은 그림이 생길거고, 그림이 있던 분들은 현재 그래픽 창과 동일하게 그림이 변경될겁니다.
+                    이런식으로 필요한 그림을 연출하고 > 그림을 저장하시면 됩니다.
+                </p>
+
+            </div>
+
+            <div style="margin-top:300px;">
+                <h2><li>페이지 설정</li></h2>
+                <p style="margin-top:100px;"></p>
+                <img src="3. Illust1/Illust23.png" width="900">
+                <p>
+                    '그림 탭 > 페이지 설정 그룹 > 페이지'에서 그림이나 애니메이션의 사이즈를 정할 수 있습니다.
+                </p>
+                <img src="3. Illust1/Illust24.png" width="900">
+                <p>
+                    이는 웹페이지에서 지원할 것인지, 태블릿에서 지원하는지 스마트폰에서 지원할지, 책자로 제공한다면 책자 사이즈 등을 고려해서 설정해 주시면 됩니다.
+                </p>
+            </div>
+
+            <div style="margin-top:300px;">
+                <h2 style="border : solid green; display: inline; padding: 10px;">중간 실습</h2>
+                <p style="margin-top:80px;"></p>
+                <strong>
+                    <p>
+                        'EBAmk2_00.step' 파일을 이용해 그림만들기를 실습해보겠습니다.
+                        내가 크레인 업체의 마케팅 담당자, 혹은 메뉴얼 제작 담당자라면 어떻게 크레인을 멋지게 보일 수 있을지 고민하며 그림을 만들어봅시다.
+                        아래 실습 예시를 올려놓지만 똑같이 따라하지 않고 자신의 아이디어로 그림을 연출해도 됩니다.
+                    </p> 
+                    <img style="margin-top:100px;" src="3. Illust1/Illust25.png" width="900">
+                    <p>1. 방향을 정합니다. 방향은 마우스와 휠, shift를 이용해 조정합니다.</p>
+                    <img src="3. Illust1/Illust26.png" width="900">
+                    <p>2. 랜더링을 정합니다. '그림 탭 > 표시 그룹 > 랜더링 모드'를 클릭하고 '음영처리 일러스트'를 선택합니다.(랜더링 선이 안보인다면 '두껍게/가늘게' 옵션을 조정합니다.)</p>
+                    <img src="3. Illust1/Illust27.png" width="900">
+                    <p>3. 조명을 연출합니다. '그림 탭 > 조명 그룹 > 조명 장면'을 클릭하고 '단일 조명'으로 선택합니다.</p>
+                    <img src="3. Illust1/Illust28.png" width="900">
+                    <p>4. 색을 연출합니다. 위와 같이 4개의 part를 '+ctrl'로 선택해 줍니다. '홈 탭 > 스타일 그룹 > 색'을 클릭합니다. RGB를 220,0,0으로 변경 후 확인을 클릭합니다.</p>
+                    <img src="3. Illust1/Illust29.png" width="900">
+                    <p>5. 위와 같이 part를 선택해 줍니다. '홈 탭 > 스타일 그룹 > 색'을 클릭합니다. RGB를 0,0,0으로 변경 후 확인을 클릭합니다.</p>
+                    <img src="3. Illust1/Illust30.png" width="900">
+                    <p>6. 배경을 연출합니다. '그림 탭 > 표시 그룹 > 배경'을 클릭합니다. RGB를 255,35,35으로 변경 후 확인을 클릭합니다.</p>
+                    <img src="3. Illust1/Illust31.png" width="900">
+                    <p>7. '그림 탭 > 표시 그룹 > 그라데이션'을 클릭합니다. RGB를 255,255,12으로 변경 후 확인을 클릭합니다.</p>
+                    <img src="3. Illust1/Illust32.png" width="900">
+                    <p>8. 기본 패널의 '그림 탭'을 클릭하고 '그림아이콘'을 클릭합니다. '홈 탭 > 탐색 그룹 > 그림 보기'를 클릭하고 '현재 그림 보기'를 선택합니다. 이렇게 하나의 그림을 만들었습니다.</p>
+                    <p>그림의 이름을 변경하고 복사하는 방법은 윈도우를 다루는 방법과 동일합니다. 그림의 이름을 변경하고 복사해봅시다.</p>
+                    
+                    <details style="margin-top: 100px;">
+                        <summary>Hint!</summary>
+                        <img src="3. Illust1/Illust33.png" width="900">
+                        <p>9. 그림1을 마우스 오른쪽 버튼으로 클릭합니다. '이름 바꾸기'를 선택하고 '해질녁'을 입력합니다.</p>
+                        <img src="3. Illust1/Illust34.png" width="900">
+                        <p>10. '해질녘' 그림을 마우스 오른쪽 버튼으로 크릭합니다. '복제'를 선택합니다.</p>
+                    </details>
+                    <style>
+                        details { margin:5px 0 100px; }
+                        details > summary { background:#444; color:#fff; padding:10px; outline:0; border-radius:5px; cursor:pointer; transition:background 0.5s; text-align:left; box-shadow: 1px 1px 2px gray;}
+                        details > summary::-webkit-details-marker { background:#444; color:#fff; background-size:contain; transform:rotate3d(0, 0, 1, 90deg); transition:transform 0.25s;}
+                        details[open] > summary::-webkit-details-marker { transform:rotate3d(0, 0, 1, 180deg);}
+                        details[open] > summary { background:rgb(0, 119, 255);}
+                        details[open] > summary ~ * { animation:reveal 0.5s;}
+                        .tpt { background:#444; color:#fff; margin:5px 0 10px; padding:5px 10px; line-height:25px; border-radius:5px; box-shadow: 1px 1px 2px gray;}
+                        
+                        @keyframes reveal {
+                            from { opacity:0; transform:translate3d(0, -30px, 0); }
+                            to { opacity:1; transform:translate3d(0, 0, 0); }
+                        }
+                    </style>
+                </strong>
+            </div>
+
+            <div style="margin-top: 100px;">
+                <p style="margin-bottom: 120px;">수고하셨습니다.</p>
+                <h3><a href="CreoIllustrate.html" class="saw" id="active">Illustrate 교육 메인페이지로 돌아가기</a></h3>
+            </div>
+        </div> <!--main, 두번째 grid 영역 끝-->
+        <div></div> <!--log, 세번째 grid 영역 시작, 끝-->
+    </div>
+</body>
+</html>

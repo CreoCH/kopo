@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html> 
+<head>
+    <title>5. 그림3</title>
+    <link rel="icon" href="favicon.png">
+    <meta charset="utf-8"> 
+    <style>
+        a {
+           color: black;
+           text-decoration: none;
+        }
+        h1 {
+           font-size: 50px;
+           text-align: center;
+           border-width: 7px;
+           border-color: green;
+           border-style: ridge;
+           margin: 0px;
+           padding: 15px;
+        }
+        img {
+           margin: 50px 50px 50px 50px;
+           object-fit: contain;
+       }
+       body {
+         margin: 0px;
+       }
+       u {
+           color: rgb(51, 104, 51)
+       }
+       p{
+        font-family:'Malgun Gothic';
+        font-size: 17px;
+        line-height: 2.4;
+       }
+        #active {
+           color: blue;
+       }
+        .saw {
+           color: gray;
+       }
+        #grid {
+           display: grid;
+           grid-template-columns: 300px 1300px 300px;
+           grid-template-areas:
+               "index  main  log"
+       }
+       iframe {
+           position: fixed;
+           border-right: 2px solid green;
+           border-bottom: none;
+           border-left: none;
+           border-top: none;
+           width: 300px;
+           height: 100%;
+           margin: 0px;
+       }
+       @media (max-width :1300px) {
+           #grid {
+               display: block;
+               margin-top: 1000px;
+           }
+           iframe {
+               position: absolute;
+           }    
+       }
+        /*
+        @media only screen and (min-width :900px) and (max-width :1300px) {
+            #grid {
+                display: block;
+                margin-top: 1000px;
+            }
+            iframe {
+                position: absolute;
+            }    
+        }
+        @media only screen and (min-width :1px) and (max-width : 900px) {
+            #grid {
+                display: block;
+                margin-top: 1000px;
+            }
+            iframe {
+                position: absolute;
+            }
+            img{
+                max-width: 100%;
+                width:auto;
+            }    
+        }
+        */
+    </style>
+</head>
+<body oncontextmenu="return false" ondragstart="return false" onselectstart="return false">
+    <h1 style= "margin-top:15px;"><a href="CreoIllustrate.html" style="color: green" title="Illustrate 교육 메인페이지로 이동">Creo Illustrate 교육</a></h1>
+    <iframe src="CreoIllustrateIndex.html"></iframe>
+    <div id="grid"> <!--이 바로 아래 div 3개가 grid로 나눠논 index, main, log-->
+        <div></div> <!--index, 첫번째 grid 영역 시작, 끝-->
+        <div style="margin:80px 80px 80px 80px;"> <!--main, 두번째 grid 영역 시작-->   
+            <div>
+                <p>본 교육을 위해 아래 다운로드를 클릭해 교육용 파일을 다운로드해 주시기 바랍니다.</p>
+                <P style="margin-top:30px;"></P>
+                <a href="https://pobisgroup-my.sharepoint.com/:f:/g/personal/ch_lee_dimoa_co_kr/Ehy2fCWJF21JuZVfs98XfXIBXDRPbrwsR3majxdzM4_Ydg?e=bhNZ12" target="_blank" style="border: solid red 4px; font-size: 20px;"> 다운로드</a>
+            </div>
+            
+            <div style="margin-top:200px;">
+                <h2><li>모델트리</li></h2>
+                <p style="margin-top:100px;"></p>
+                <img src="5. Illust3/Illust73.png" width="900">
+                <p>
+                    다운받은 폴더에서 'Farmbot.pvz' 파일을 가져오기 합니다.
+                    CAD를 수정하지 않을 것이기 때문에 가져오기에서 '포함/연결' 중 아무거나 선택하셔도 됩니다.
+                </p>
+                <p>
+                    eBOM은 엔지니어링 BOM이고 sBOM은 서비스 BOM입니다.
+                    이 부분은 관련 업무가 아니면 사용할 일이 없고, 관련 업무를 하신다면 잘 알고 있는 기능이기 떄문에 기능만 소개해 드리고 넘어가도록 하겠습니다.
+                </p>
+                <p>
+                    모델트리와 그래픽창은 서로 데이터 종속성을 가지고 있습니다.
+                    때문에 그래픽창에서 위치를 찾기 힘든건 모델트리에서 찾으면 유리하고, 모델트리에서 찾기 힘든건 그래픽 창에서 찾는 것이 좋습니다.
+                </p>
+                <img src="5. Illust3/Illust75.png" width="900">
+                <p>
+                    예시를 들면 그래픽창 안에서는 Gantry 안에 연결된 전선들을 확인하기 어렵습니다.(이런 크래인들을 갠트리 크레인이라고 함)
+                </p>
+                <img src="5. Illust3/Illust76.png" width="900">
+                <p>
+                    모델트리에서 다음과 같이 케이블을 확인할 수 있습니다. 케이블을 선택하면 그래픽창에서도 선택강조되는 것을 볼 수 있습니다.
+                </p>
+            </div>
+
+            <div style="margin-top:300px;">
+                <h2><li>구조 편집</li></h2>
+                <p style="margin-top:100px;"></p>
+                <img src="5. Illust3/Illust77.png" width="900">
+                <p>
+                    sBOM, 서비스 용 BOM을 편집해보겠습니다.
+                    '도구 탭 > 도구 그룹 > 구조 편집'을 클릭합니다.
+                </p>
+                <img src="5. Illust3/Illust78.png" width="900">
+                <p>
+                    상단 패널이 열리며, eBOM이 표시되는 것을 볼 수 있습니다.
+                    이 상태에서 sBOM을 편집할 수 있습니다.
+                    상단 패널에 원본BOM(eBOM)이 계속 유지되기 때문에 걱정없이 편집하시면 됩니다.
+                </p>
+                <img src="5. Illust3/Illust79.png" width="900">
+                <img src="5. Illust3/Illust80.png" width="900">
+                <p>
+                    다음과 같이 모델트리에서 삭제해서 부품들을 사라지게 할 수 있고,
+                </p>
+                <img src="5. Illust3/Illust81.png" width="900">
+                <img src="5. Illust3/Illust82.png" width="900">
+                <p>
+                    드래그&드롭으로 모델트리 구조를 변경할 수 있습니다.
+                </p>
+                <img src="5. Illust3/Illust83.png" width="900">
+                <p>
+                    삭제 후 다시 복구하고 싶은 모델은 eBOM에서 드래그&드롭해서 복구시킬 수 있습니다.
+                </p>
+            </div>
+
+            <div style="margin-top: 100px;">
+                <p style="margin-bottom: 120px;">수고하셨습니다.</p>
+                <h3><a href="CreoIllustrate.html" class="saw" id="active">Illustrate 교육 메인페이지로 돌아가기</a></h3>
+            </div>
+        </div> <!--main, 두번째 grid 영역 끝-->
+        <div></div> <!--log, 세번째 grid 영역 시작, 끝-->
+    </div>
+</body>
+</html>

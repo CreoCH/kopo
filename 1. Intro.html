@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html> 
+<head>
+    <title>1. Creo Illustrate 소개</title>
+    <link rel="icon" href="favicon.png">
+    <meta charset="utf-8"> 
+    <style>
+        a {
+           color: black;
+           text-decoration: none;
+        }
+        h1 {
+           font-size: 50px;
+           text-align: center;
+           border-width: 7px;
+           border-color: green;
+           border-style: ridge;
+           margin: 0px;
+           padding: 15px;
+        }
+        img {
+           margin: 50px 50px 50px 50px;
+           object-fit: contain;
+       }
+       body {
+         margin: 0px;
+       }
+       u {
+           color: rgb(51, 104, 51)
+       }
+       p{
+        font-family:'Malgun Gothic';
+        font-size: 17px;
+        line-height: 2.4;
+       }
+        #active {
+           color: blue;
+       }
+        .saw {
+           color: gray;
+       }
+        #grid {
+           display: grid;
+           grid-template-columns: 300px 1300px 300px;
+           grid-template-areas:
+               "index  main  log"
+       }
+       iframe {
+           position: fixed;
+           border-right: 2px solid green;
+           border-bottom: none;
+           border-left: none;
+           border-top: none;
+           width: 300px;
+           height: 100%;
+           margin: 0px;
+       }
+       @media (max-width :1300px) {
+           #grid {
+               display: block;
+               margin-top: 1000px;
+           }
+           iframe {
+               position: absolute;
+           }    
+       }
+        /*
+        @media only screen and (min-width :900px) and (max-width :1300px) {
+            #grid {
+                display: block;
+                margin-top: 1000px;
+            }
+            iframe {
+                position: absolute;
+            }    
+        }
+        @media only screen and (min-width :1px) and (max-width : 900px) {
+            #grid {
+                display: block;
+                margin-top: 1000px;
+            }
+            iframe {
+                position: absolute;
+            }
+            img{
+                max-width: 100%;
+                width:auto;
+            }    
+        }
+        */
+    </style>
+</head>
+<body oncontextmenu="return false" ondragstart="return false" onselectstart="return false">
+    <h1 style= "margin-top:15px;"><a href="CreoIllustrate.html" style="color: green" title="Illustrate 교육 메인페이지로 이동">Creo Illustrate 교육</a></h1>
+    <iframe src="CreoIllustrateIndex.html"></iframe>
+    <div id="grid"> <!--이 바로 아래 div 3개가 grid로 나눠논 index, main, log-->
+        <div></div> <!--index, 첫번째 grid 영역 시작, 끝-->
+        <div style="margin:80px 80px 80px 80px;"> <!--main, 두번째 grid 영역 시작-->         
+            <div style="margin-top:200px;">
+                <h2><li>Creo Illustrate란</li></h2>
+                <p style="margin-top:100px;"></p>
+                <img src="1. Intro/Intro1.png" width="750">
+                <p style="margin-top: 200px;"><strong><u>Illustrate로 제작한 다양한 이미지</u></strong></p>
+                <img src="1. Intro/Intro2.png" width="600">
+                <img src="1. Intro/Intro3.png" width="600">
+                <img src="1. Intro/Intro4.png" width="800">
+                <p style="margin-top: 200px;"><strong><u>Illustrate로 제작한 3D 애니메이션</u></strong></p>
+                <p style="margin-top:100px;"><video src="1. Intro/Intro1.mp4" width="900" controls></video></p>
+                <p>
+                    위와 같이 다양한 이미지와 애니메이션을 작성자의 생각대로 연출, 생성할 수 있습니다.
+                    제작한 컨텐츠를 이용해 고객들은 쉽게 제품을 배우고 적응할 수 있습니다.
+                    또한 이렇게 제작된 애니메이션이 단순한 2D가 아니라 3D 정보를 가지는 파일이기 때문에 이를 활용해 AR 콘텐츠를 만들 수 있습니다.
+                    (Vuforia Studio)
+                </p>
+            </div>
+
+            <div style="margin-top:300px;">
+                <h2><li>인터페이스</li></h2>
+                <p style="margin-top:50px;"></p>
+                <img src="1. Intro/Intro5.png" width="900">
+                <p style="margin-top: 50px;">① 리본</p>
+                <p>
+                    &nbsp : 리본은 탭과 그룹으로 이루어져 있습니다. 
+                    큰 틀로 분류한 것이 탭(홈, 그림)이고 작은 분류한 것이 그룹(탐색, 표시)입니다.
+                    프로그램에서 제공하는 대부분의 기능들은 리본에 모여있습니다.
+                </p>
+                <p style="margin-top: 50px;">② 기본 패널</p>
+                <p>
+                    &nbsp : 기본 패널에서는 모델트리, 그림 목록 등을 제공합니다.
+                </p>
+                <p style="margin-top: 50px;">③ 상단 패널</p>
+                <p>&nbsp : 데이텀, 주석, 레이어, 선택 집합을 관리합니다.</p>
+                <p style="margin-top: 50px;">④ 하단 패널</p>
+                <p>&nbsp : 파트 항목 목록을 관리하거나 애니메이션 편집 작업이 이루어지는 창입니다.</p>
+                <p style="margin-top: 50px;">⑤ 그래픽 창</p>
+                <p>&nbsp : 생성하는 그림, 애니메이션을 바로 그래픽으로 확인할 수 있는 창입니다.</p>
+                <p style="margin-top: 50px;">⑥ 패널 컨트롤</p>
+                <p>&nbsp : 기본 패널, 상단 패널, 하단 패널을 켜고 끌 수 있습니다.</p>
+                <p style="margin-top: 100px;"></p>
+                <img src="1. Intro/Intro8.png" width="900">
+                <p>
+                    상단 패널, 하단 패널에 다음과 같은 아이콘을 볼 수 있습니다. 
+                    <img style="margin: 0px 0px 0px 0px;" src="1. Intro/Intro9.png" width="15">은 패널이 이미지의 경계를 구분하고
+                    <img style="margin: 0px 0px 0px 0px;" src="1. Intro/Intro10.png" width="15">은 패널이 경계를 구분하지 못하기 때문에
+                    클릭으로 <img style="margin: 0px 0px 0px 0px;" src="1. Intro/Intro9.png" width="15">이 아이콘 상태로 작업을 진행하시기 바랍니다.
+                    이 부분은 추후에 애니메이션을 진행할 때 다시 설명드리도록 하겠습니다.
+                </p>
+            </div>
+
+            <div style="margin-top: 100px;">
+                <p style="margin-bottom: 120px;">수고하셨습니다.</p>
+                <h3><a href="CreoIllustrate.html" class="saw" id="active">Illustrate 교육 메인페이지로 돌아가기</a></h3>
+            </div>
+        </div> <!--main, 두번째 grid 영역 끝-->
+        <div></div> <!--log, 세번째 grid 영역 시작, 끝-->
+    </div>
+</body>
+</html>

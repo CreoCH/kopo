@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html> 
+<head>
+    <title>2. 가져오기</title>
+    <link rel="icon" href="favicon.png">
+    <meta charset="utf-8"> 
+    <style>
+        a {
+           color: black;
+           text-decoration: none;
+        }
+        h1 {
+           font-size: 50px;
+           text-align: center;
+           border-width: 7px;
+           border-color: green;
+           border-style: ridge;
+           margin: 0px;
+           padding: 15px;
+        }
+        img {
+           margin: 50px 50px 50px 50px;
+           object-fit: contain;
+       }
+       body {
+         margin: 0px;
+       }
+       u {
+           color: rgb(51, 104, 51)
+       }
+       p{
+        font-family:'Malgun Gothic';
+        font-size: 17px;
+        line-height: 2.4;
+       }
+        #active {
+           color: blue;
+       }
+        .saw {
+           color: gray;
+       }
+        #grid {
+           display: grid;
+           grid-template-columns: 300px 1300px 300px;
+           grid-template-areas:
+               "index  main  log"
+       }
+       iframe {
+           position: fixed;
+           border-right: 2px solid green;
+           border-bottom: none;
+           border-left: none;
+           border-top: none;
+           width: 300px;
+           height: 100%;
+           margin: 0px;
+       }
+       @media (max-width :1300px) {
+           #grid {
+               display: block;
+               margin-top: 1000px;
+           }
+           iframe {
+               position: absolute;
+           }    
+       }
+        /*
+        @media only screen and (min-width :900px) and (max-width :1300px) {
+            #grid {
+                display: block;
+                margin-top: 1000px;
+            }
+            iframe {
+                position: absolute;
+            }    
+        }
+        @media only screen and (min-width :1px) and (max-width : 900px) {
+            #grid {
+                display: block;
+                margin-top: 1000px;
+            }
+            iframe {
+                position: absolute;
+            }
+            img{
+                max-width: 100%;
+                width:auto;
+            }    
+        }
+        */
+    </style>
+</head>
+<body oncontextmenu="return false" ondragstart="return false" onselectstart="return false">
+    <h1 style= "margin-top:15px;"><a href="CreoIllustrate.html" style="color: green" title="Illustrate 교육 메인페이지로 이동">Creo Illustrate 교육</a></h1>
+    <iframe src="CreoIllustrateIndex.html"></iframe>
+    <div id="grid"> <!--이 바로 아래 div 3개가 grid로 나눠논 index, main, log-->
+        <div></div> <!--index, 첫번째 grid 영역 시작, 끝-->
+        <div style="margin:80px 80px 80px 80px;"> <!--main, 두번째 grid 영역 시작-->
+            <div>
+                <p>본 교육을 위해 아래 다운로드를 클릭해 교육용 파일을 다운로드해 주시기 바랍니다.</p>
+                <P style="margin-top:30px;"></P>
+                <a href="https://pobisgroup-my.sharepoint.com/:f:/g/personal/ch_lee_dimoa_co_kr/Ehy2fCWJF21JuZVfs98XfXIBXDRPbrwsR3majxdzM4_Ydg?e=bhNZ12" target="_blank" style="border: solid red 4px; font-size: 20px;"> 다운로드</a>
+            </div>         
+            <div style="margin-top:200px;">
+                <h2><li>가져오기</li></h2>
+                <p style="margin-top:100px;"></p>
+                <img src="2. Import/Import1.png" width="900">
+                <p>
+                    Illustrate를 시작하면 다음과 같은 시작화면을 볼 수 있습니다.
+                    '홈 탭 > 시작 그룹 > 가져오기'를 누르면 3D 파일들을 가져올 수 있습니다.
+                </p>
+                <img src="2. Import/Import2.png" width="900">
+                <p>
+                    혹은 '파일 탭 > 가져오기'를 누르면 3D 파일들을 가져올 수 있습니다.
+                </p>
+            </div>
+
+            <div style="margin-top:300px;">
+                <h2><li>파일 형식</li></h2>
+                <p style="margin-top:100px;"></p>
+                <img src="2. Import/Import3.png" width="900">
+                <p>
+                    Illustrate는 대부분의 파일 형식을 지원합니다.
+                    공통 Format만이 아니라 타사 CAD (솔리드웍스, 인벤터, NX 등) Format도 지원하고 있습니다.
+                </p>
+                <p>
+                    다만 타사 CAD의 경우 다른 솔버와 프로그래밍으로 설계된 만큼, Creo로 설계한 CAD를 가져오는 것 만큼 완벽하게 가져올 수 없습니다.
+                </p>
+                <p>
+                    간혹 깨지는 CAD나 누락되는 정보가 있을 수 있습니다.
+                    (때문에 가능하면 PTC format인 'asm, prt, pvz' 등의 파일로 작업하는 것을 추천드립니다.)
+                    대표적인 예시로 아래 설명드릴 '가져오기 > 연결' 기능의 적용 여부가 있습니다.
+                </p>
+            </div>
+
+            <div style="margin-top:300px;">
+                <h2><li>포함 / 연결</li></h2>
+                <p style="margin-top:100px;"></p>
+                <img src="2. Import/Import1.png" width="900">
+                <p>
+                    가져오기에는 '포함/연결'이 있습니다.
+                    연결로 파일을 가져오면 파일이 수정될 시 수정된 CAD 정보를 가져와 Illustrate에 적용합니다.
+                </p>
+                <img src="2. Import/Import4.png" width="900">
+                <p>
+                    사용 용도에 따라 포함으로 가져올지 연결로 가져올지 결정하면 됩니다.
+                    '연결 가져오기'는 Step 등 다른 파일 형식에도 지원하지만 Creo 파일들에 비해 오류가 날 확률이 높아 사용을 추천드리지 않습니다.
+                </p>
+            </div>
+
+            <div style="margin-top:300px;">
+                <h2><li>만들기</li></h2>
+                <p style="margin-top:100px;"></p>
+                <img src="2. Import/Import5.png" width="900">
+                <p>
+                    가져오기 시 파일 로딩이 끝나면 다음과 같은 '새 그림'창이 나옵니다.
+                    빈화면으로 나오는데, 나타내려는 CAD를 선택해줘야 화면에 표시됩니다.
+                    '기본값'을 클릭하면 CAD가 나타나는 것을 볼 수 있습니다.
+                </p>
+                <img src="2. Import/Import6.png" width="900">
+                <p>
+                    '만들기 및 닫기'를 클릭합니다.
+                </p>
+                <img src="2. Import/Import7.png" width="900">
+                <p>
+                    그래픽 창 하단에 '현재 보기 사용, 나중에 하기'가 나오는데 어떤 것을 클릭해도 상관없습니다.
+                </p>
+                <img src="2. Import/Import1.gif" width="700">
+            </div>
+
+            <div style="margin-top: 100px;">
+                <p style="margin-bottom: 120px;">수고하셨습니다.</p>
+                <h3><a href="CreoIllustrate.html" class="saw" id="active">Illustrate 교육 메인페이지로 돌아가기</a></h3>
+            </div>
+        </div> <!--main, 두번째 grid 영역 끝-->
+        <div></div> <!--log, 세번째 grid 영역 시작, 끝-->
+    </div>
+</body>
+</html>
